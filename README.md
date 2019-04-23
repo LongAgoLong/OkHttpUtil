@@ -12,6 +12,8 @@ allprojects {
 ```
 ```java
 implementation 'com.github.LongAgoLong:OkHttpUtil:$JitPack-Version$'
+implementation 'com.squareup.okhttp3:okhttp:3.14.0'
+implementation 'com.squareup.okio:okio:1.17.2'
 ```
 **maven依赖**
 ```java

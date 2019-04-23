@@ -5,7 +5,6 @@ package com.leo.okhttplib.ssl;
  * Create by LEO
  * on 2018/3/16
  * at 17:31
- * in MoeLove Company
  */
 public class HttpError extends Exception {
     private int errorCode;

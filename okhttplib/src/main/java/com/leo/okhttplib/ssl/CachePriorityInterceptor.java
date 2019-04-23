@@ -12,7 +12,6 @@ import okhttp3.Response;
  * Create by LEO
  * on 2018/11/19
  * at 10:36
- * in MoeLove Company
  * 缓存优先
  */
 public class CachePriorityInterceptor implements Interceptor {

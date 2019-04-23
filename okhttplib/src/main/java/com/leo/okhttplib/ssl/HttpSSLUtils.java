@@ -26,12 +26,13 @@ import okhttp3.TlsVersion;
  * Create by LEO
  * on 2018/3/20
  * at 14:40
- * in MoeLove Company
  */
 public class HttpSSLUtils {
-    /*
+    /**
      * 支持okhttp明文通信
-     * */
+     *
+     * @return
+     */
     public static ArrayList<ConnectionSpec> getUnSafeConnectionSpecs() {
         ArrayList<ConnectionSpec> connectionSpecs = new ArrayList<>();
         ConnectionSpec unSafeConnectionSpec = new ConnectionSpec.Builder(ConnectionSpec.CLEARTEXT).build();

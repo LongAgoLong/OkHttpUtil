@@ -28,7 +28,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    api 'com.squareup.okhttp3:okhttp:3.14.0'
-    api 'com.squareup.okio:okio:1.17.2'
+    compileOnly 'com.squareup.okhttp3:okhttp:3.14.0'
+    compileOnly 'com.squareup.okio:okio:1.17.2'
     api files('libs/okhttputils-2_6_2.jar')
 }
