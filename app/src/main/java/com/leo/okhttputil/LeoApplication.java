@@ -5,7 +5,6 @@ import android.app.Application;
 import com.leo.okhttplib.ssl.HttpSSLUtils;
 import com.leo.okhttplib.ssl.SSLParams;
 import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.https.HttpsUtils;
 
 import java.net.Proxy;
 import java.util.ArrayList;
