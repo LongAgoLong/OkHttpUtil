@@ -17,9 +17,11 @@ import okhttp3.Dns;
  */
 public class TimeoutDNS implements Dns {
     private long timeout;
+    private TimeUnit unit;
 
-    public TimeoutDNS(long timeoutMilliseconds) {
-        this.timeout = timeoutMilliseconds;
+    public TimeoutDNS(long timeout, TimeUnit unit) {
+        this.timeout = timeout;
+        this.unit = unit;
     }
 
     @Override
@@ -36,7 +38,7 @@ public class TimeoutDNS implements Dns {
                             }
                         });
                 new Thread(task).start();
-                return task.get(timeout, TimeUnit.MILLISECONDS);
+                return task.get(timeout, unit);
             } catch (Exception var4) {
                 UnknownHostException unknownHostException =
                         new UnknownHostException("Broken system behaviour for dns lookup of " + hostname);
