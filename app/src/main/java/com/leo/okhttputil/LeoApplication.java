@@ -23,7 +23,7 @@ public class LeoApplication extends Application {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .sslSocketFactory(sslParams.sSLSocketFactory, sslParams.trustManager)
                 .connectionSpecs(unSafeConnectionSpecs)
-                .dns(new TimeoutDNS(3000))
+                .dns(new TimeoutDNS(3, TimeUnit.SECONDS))
                 .retryOnConnectionFailure(true)
                 .addInterceptor(new RetryIntercepter(2))
                 .proxy(Proxy.NO_PROXY)
