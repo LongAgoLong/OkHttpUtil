@@ -3,6 +3,7 @@ package com.leo.okhttputil;
 import android.app.Application;
 
 import com.leo.okhttplib.dns.TimeoutDNS;
+import com.leo.okhttplib.interceptor.LogIntercepter;
 import com.leo.okhttplib.interceptor.RetryIntercepter;
 import com.leo.okhttplib.ssl.HttpSSLUtils;
 import com.leo.okhttplib.ssl.SSLParams;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import okhttp3.ConnectionSpec;
 import okhttp3.OkHttpClient;
 
-public class LeoApplication extends Application {
+public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
@@ -26,6 +27,7 @@ public class LeoApplication extends Application {
                 .dns(new TimeoutDNS(3, TimeUnit.SECONDS))
                 .retryOnConnectionFailure(true)
                 .addInterceptor(new RetryIntercepter(2))
+                .addInterceptor(new LogIntercepter("OKHTTP", true))
                 .proxy(Proxy.NO_PROXY)
                 //其他配置
                 .build();
