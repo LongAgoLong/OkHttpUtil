@@ -11,6 +11,7 @@ import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.net.Proxy;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.ConnectionSpec;
 import okhttp3.OkHttpClient;

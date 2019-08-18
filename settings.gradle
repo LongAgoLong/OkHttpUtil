@@ -1,2 +1,2 @@
-include ':app',  ':okhttplib'
+include ':app',  ':okhttplib', ':okhttputiljar'
 rootProject.name='OkHttpUtil'
