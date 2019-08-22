@@ -5,8 +5,8 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 28
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.targetSdk
         versionCode 1
         versionName "1.0"
 
@@ -31,6 +31,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    compileOnly 'com.squareup.okhttp3:okhttp:3.14.0'
-    compileOnly 'com.squareup.okio:okio:1.17.2'
+    compileOnly "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttp"
+    compileOnly "com.squareup.okio:okio:$rootProject.ext.okio"
 }
