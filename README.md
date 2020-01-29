@@ -11,8 +11,8 @@ allprojects {
 }
 ```
 ```java
-implementation 'com.github.LongAgoLong:OkHttpUtil:okhttplib:$JitPack-Version$'
-implementation 'com.github.LongAgoLong:OkHttpUtil:okhttputiljar:$JitPack-Version$'
+implementation 'com.github.LongAgoLong.OkHttpUtil:okhttplib:1.2'
+implementation 'com.github.LongAgoLong.OkHttpUtil:okhttputiljar:1.2'
 implementation 'com.squareup.okhttp3:okhttp:3.14.0'
 implementation 'com.squareup.okio:okio:1.17.2'
 ```
